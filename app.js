@@ -14,10 +14,11 @@ const categoryRoutes = require("./routes/category");
 const productRoutes = require("./routes/product");
 const orderRoutes = require("./routes/order");
 const stripeRoutes = require("./routes/stripepayment");
+const uri=process.env.MONGODB_URI;
 
 //DB Connection
 mongoose
-  .connect(process.env.DATABASE, {
+  .connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
